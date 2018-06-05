@@ -1,0 +1,2 @@
+#!/bin/bash
+cp ~/Projects/allfred/dist/*.js /var/www/html/allfred-api/site/templates/scripts

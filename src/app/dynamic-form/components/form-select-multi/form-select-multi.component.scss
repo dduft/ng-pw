@@ -1,0 +1,17 @@
+//@import "../../../../assets/stylesheets/project-variables";
+
+::ng-deep angular2-multiselect > .cuppa-dropdown > .selected-list > .c-btn {
+  min-height: 1.5rem;
+  border: none;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-size: inherit;
+
+  .c-token {
+    //background-color: $project-green !important;
+  }
+}
+
+.form-group {
+  padding: 0;
+}

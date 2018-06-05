@@ -1,0 +1,12 @@
+<div
+  *ngFor="let field of data"
+  [ngSwitch]="field.type">
+  <ng-container *ngIf="field.status == 1">
+    <app-headline [field]="field" *ngSwitchCase="'headline'"></app-headline>
+    <app-text-image-box [field]="field" *ngSwitchCase="'text_image_box'"></app-text-image-box>
+    <app-text-image-multi [field]="field" *ngSwitchCase="'text_image_multi'"></app-text-image-multi>
+    <app-gallery [field]="field" *ngSwitchCase="'gallery'"></app-gallery>
+    <app-cards-box [field]="field" *ngSwitchCase="'cards_box'"></app-cards-box>
+    <app-accordions-box [field]="field" *ngSwitchCase="'accordions_box'"></app-accordions-box>
+  </ng-container>
+</div>

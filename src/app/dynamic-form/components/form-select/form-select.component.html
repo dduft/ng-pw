@@ -1,0 +1,17 @@
+<div
+  class="form-group"
+  [formGroup]="group"
+  [ngClass]="config.size > 0 ? 'col-md-'+config.fieldWidthGridNumber : ''">
+  <label [attr.for]="config.name">{{ config.label }}<span style="color: red;">{{config.required ? '*' : ''}}</span></label>
+  <select
+    class="form-control"
+    [attr.id]="config.name"
+    [ngClass]="{'is-invalid': isFieldValid(config.name)}"
+    [formControlName]="config.name">
+    <option value="">{{ config.placeholder }}</option>
+    <option *ngFor="let option of config.options">
+      {{ option.title }}
+    </option>
+  </select>
+  <div class="invalid-feedback">{{config.notes}}</div>
+</div>

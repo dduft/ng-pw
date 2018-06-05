@@ -1,0 +1,11 @@
+<div
+  class="dynamic-field form-button"
+  [formGroup]="group">
+  <button
+    [disabled]="config.disabled"
+    [attr.type]="config.type"
+    [ngClass]="group.valid ? 'btn-primary' : 'btn-secondary'"
+    class="btn">
+    {{ config.label }}
+  </button>
+</div>

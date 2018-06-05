@@ -1,0 +1,10 @@
+<ng-container *ngFor="let field of page?.data | keyValue">
+  <app-content-repeater [data]="field.value.data" *ngIf="field.key == 'content_elements'"></app-content-repeater>
+  <div *ngIf="field.key.startsWith('form_')">
+    <app-dynamic-form
+      [pwForm]="field.value.data[0].data"
+      #form="dynamicForm"
+      (submit)="submit($event)">
+    </app-dynamic-form>
+  </div>
+</ng-container>

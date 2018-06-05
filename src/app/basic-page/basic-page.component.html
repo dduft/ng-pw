@@ -1,0 +1,5 @@
+<div
+  *ngFor="let field of page?.data | keyValue"
+  [ngSwitch]="field.key">
+  <app-content-repeater [data]="field.value.data" *ngSwitchCase="'content_elements'"></app-content-repeater>
+</div>

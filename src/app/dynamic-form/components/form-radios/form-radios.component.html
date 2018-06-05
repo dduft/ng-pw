@@ -1,0 +1,17 @@
+<fieldset
+  class="form-group"
+  [formGroup]="group"
+  [ngClass]="config.size > 0 ? 'col-md-'+config.fieldWidthGridNumber : ''">
+  <legend class="col-form-label">{{ config.label }}<span style="color: red;">{{config.required ? '*' : ''}}</span></legend>
+  <div class="form-check" *ngFor="let option of config.options; let i = index">
+    <input
+      class="form-check-input"
+      type="radio"
+      [attr.id]="config.name"
+      [formControlName]="config.name"
+      [ngClass]="{'is-invalid': isFieldValid(config.name)}"
+      [value]="option.value">
+    <label class="form-check-label" [attr.for]="config.name">{{ option.title }}</label>
+    <div *ngIf="i == config.options.length - 1" class="invalid-feedback">{{config.notes}}</div>
+  </div>
+</fieldset>

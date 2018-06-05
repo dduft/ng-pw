@@ -1,0 +1,31 @@
+.navbar {
+  position: absolute;
+  border: none;
+
+  @media (min-width: 992px) {
+    .navbar-nav {
+      .nav-item:not(:first-child) > .nav-link:before {
+        content: "| ";
+      }
+    }
+  }
+
+  .navbar-brand img {
+    height: 75px;
+    width: auto;
+    box-shadow: 2px 2px 15px #000;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+
+  .nav-item {
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .nav-link {
+      padding: 0.2em;
+      color: white;
+    }
+  }
+}

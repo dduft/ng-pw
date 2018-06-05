@@ -1,0 +1,20 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/" !default;
+
+@import "sass/variables";
+@import "sass/bootswatch";
+@import "sass/project-variables";
+
+html {
+  min-height: calc(100% + 1px);
+}
+
+body {
+  background-color: $project-background;
+}
+
+body > app-root > .container {
+  padding: 0;
+  background-color: #fff;
+}

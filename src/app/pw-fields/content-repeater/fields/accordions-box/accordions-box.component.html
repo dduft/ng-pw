@@ -1,0 +1,19 @@
+<div class="accordions-box" *ngFor="let subfield of field.data | keyValue; let i = index">
+  <div class="accordion-repeater mb-5" *ngIf="subfield.key == 'accordions'">
+    <div class="accordion" [attr.id]="'accordion_'+field.sort">
+      <div class="card" *ngFor="let item of subfield.value.data">
+        <div class="card-header" [attr.id]="'heading_'+item.name">
+          <button class="btn btn-link" type="button" data-toggle="collapse" [attr.data-target]="'#collapse_'+item.name" aria-expanded="false" [attr.aria-controls]="'collapse_'+item.name">
+            <h5>{{item.data.textfield_1.data}}</h5>
+          </button>
+        </div>
+
+        <div [attr.id]="'collapse_'+item.name" class="collapse" [attr.aria-labelledby]="'heading_'+item.name" [attr.data-parent]="'#accordion_'+field.sort">
+          <div class="card-body">
+            <app-textarea-html-wysiwyg [field]="item.data.textarea_html_wysiwyg_1" *ngIf="item.data.textarea_html_wysiwyg_1"></app-textarea-html-wysiwyg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

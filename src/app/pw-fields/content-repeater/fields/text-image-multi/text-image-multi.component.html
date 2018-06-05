@@ -1,0 +1,5 @@
+<div *ngFor="let subfield of field.data.text_image_multi.data">
+  <app-textarea-html-wysiwyg [field]="subfield.data.textarea_html_wysiwyg_1" *ngIf="subfield.data.textarea_html_wysiwyg_1"></app-textarea-html-wysiwyg>
+  <app-image-single [data]="subfield.data.img_single" *ngIf="subfield.data.img_single"></app-image-single>
+  <app-image-single [data]="subfield.data.svg_single" *ngIf="subfield.data.svg_single"></app-image-single>
+</div>

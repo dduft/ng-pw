@@ -1,0 +1,40 @@
+//footer was .fixed-bottom and container padding: 0 0 60px;
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #ffffff;
+  border: none;
+  justify-content: center;
+
+  @media (min-width: 992px) {
+    .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+
+    .nav-item:not(:first-child) > .nav-link:before {
+      content: "| ";
+    }
+
+    .nav-item {
+      background-color: rgba(0, 0, 0, 0.6);
+
+      .nav-link {
+        padding: 0.2rem;
+        color: white;
+      }
+    }
+  }
+
+  .footer-brand {
+    img {
+      padding-right: 10px;
+    }
+  }
+}

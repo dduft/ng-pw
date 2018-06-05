@@ -1,0 +1,99 @@
+@import "~sass/project-variables";
+@import "~sass/home";
+
+:host ::ng-deep  simple-notifications {
+  .simple-notification-wrapper {
+    z-index: 1040;
+  }
+}
+
+::ng-deep {
+
+  app-gallery {
+    .carousel-item {
+      max-height: 475px;
+    }
+  }
+
+  app-headline h2 {
+    padding: 20px 60px;
+    text-align: center;
+  }
+
+  app-text-image-box {
+    padding: 25px 60px;
+
+    h2 {
+      text-align: center;
+    }
+
+    app-image-single {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 575px) {
+    app-text-image-box {
+      padding: 25px 20px;
+    }
+
+    app-headline h2 {
+      padding: 20px 20px;
+    }
+  }
+
+  app-cards-box {
+    & > div {
+      padding: 20px 30px;
+    }
+
+    .card {
+      width: 15rem;
+      border: none;
+      border-radius: 0;
+      margin-bottom: 20px;
+
+      .card-img-top {
+        border-radius: 0;
+        height: 13rem;
+      }
+    }
+
+    &.blue-head-icon {
+    }
+  }
+
+  app-text-image-box {
+    &.grey-noicon {
+      background-color: $project-grey;
+      text-align: center;
+    }
+  }
+
+  app-accordions-box {
+
+    .accordion {
+      padding: 0 60px;
+
+      .card {
+        text-align: left;
+        border: none;
+        border-radius: 0;
+
+        .card-header {
+          background-color: $project-grey;
+          border-radius: 0;
+
+          button {
+            color: inherit;
+            white-space: normal;
+          }
+
+          h5 {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+
+<div class="d-flex flex-wrap justify-content-around">
+  <div class="card" *ngFor="let item of field.data.cards.data">
+    <img class="card-img-top" *ngIf="item.data.img_single" src="{{pwBaseUrl+item.data.img_single[0].url}}" alt="Card image cap">
+    <img class="card-img-top" *ngIf="item.data.svg_single" src="{{pwBaseUrl+item.data.svg_single[0].url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.data.title.data}}</h5>
+      <p class="card-text" *ngIf="item.data.textfield_1 && item.data.textfield_1.data !=''">{{item.data.textfield_1.data}}</p>
+      <div class="card-text" *ngIf="item.data.textarea_html_wysiwyg_1" [innerHTML]="item.data.textarea_html_wysiwyg_1.data"></div>
+    </div>
+  </div>
+</div>
