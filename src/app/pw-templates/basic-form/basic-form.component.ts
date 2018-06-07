@@ -4,14 +4,14 @@ import { Router } from '@angular/router';
 import { RouterLinkService } from '../../core/router-link.service';
 import { NotificationsService } from 'angular2-notifications';
 import { DynamicFormComponent } from '../../dynamic-form/containers/dynamic-form/dynamic-form.component';
-import { BasicPageComponent } from '../../basic-page/basic-page.component';
+import { BasicPageComponent } from '../basic-page/basic-page.component';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  templateUrl: './basic-form.component.html',
+  styleUrls: ['./basic-form.component.scss']
 })
-export class FormComponent extends BasicPageComponent implements OnInit {
+export class BasicFormComponent extends BasicPageComponent implements OnInit {
 
   @ViewChild(DynamicFormComponent)
   form: DynamicFormComponent;

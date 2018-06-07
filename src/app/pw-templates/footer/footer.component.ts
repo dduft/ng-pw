@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLinkService, PwRouterLink } from '../core/router-link.service';
+import { RouterLinkService, PwRouterLink } from '../../core/router-link.service';
 
 @Component({
   selector: 'app-footer',

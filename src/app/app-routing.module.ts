@@ -1,12 +1,13 @@
 import { NgModule, ComponentFactoryResolver } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { PwService } from './core/pw.service';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterLinkService, PwRouterLink } from './core/router-link.service';
 import { WindowRef } from './core/window-ref.service';
 import { environment } from '../environments/environment';
-import { ContactComponent } from './forms/contact.component';
-import { BasicPageComponent } from './basic-page/basic-page.component';
+import { BasicPageComponent } from './pw-templates/basic-page/basic-page.component';
+import { ContactComponent } from './pw-templates/contact.component';
+import { NotFoundComponent } from './pw-templates/not-found/not-found.component';
+
 
 const routes: Routes = [
   {

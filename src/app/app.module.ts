@@ -22,19 +22,19 @@ import { ImageSingleComponent } from './pw-fields/image-single/image-single.comp
 import { ImageMultiComponent } from './pw-fields/image-multi/image-multi.component';
 import { TextareaHtmlWysiwygComponent } from './pw-fields/textarea-html-wysiwyg/textarea-html-wysiwyg.component';
 import { TextfieldComponent } from './pw-fields/textfield/textfield.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
 import { RouterLinkService } from './core/router-link.service';
 import { CardsBoxComponent } from './pw-fields/content-repeater/fields/cards-box/cards-box.component';
 import { AccordionsBoxComponent } from './pw-fields/content-repeater/fields/accordions-box/accordions-box.component';
-import { ContactComponent } from './forms/contact.component';
 import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TextImageMultiComponent } from './pw-fields/content-repeater/fields/text-image-multi/text-image-multi.component';
-import { FormComponent } from './forms/form/form.component';
-import { BasicPageComponent } from './basic-page/basic-page.component';
+import { NotFoundComponent } from './pw-templates/not-found/not-found.component';
+import { BasicPageComponent } from './pw-templates/basic-page/basic-page.component';
+import { NavbarComponent } from './pw-templates/navbar/navbar.component';
+import { FooterComponent } from './pw-templates/footer/footer.component';
+import { ContactComponent } from './pw-templates/contact.component';
+import { BasicFormComponent } from './pw-templates/basic-form/basic-form.component';
 
 
 @NgModule({
@@ -59,7 +59,7 @@ import { BasicPageComponent } from './basic-page/basic-page.component';
     AccordionsBoxComponent,
     ContactComponent,
     TextImageMultiComponent,
-    FormComponent
+    BasicFormComponent
   ],
   imports: [
     BrowserModule,

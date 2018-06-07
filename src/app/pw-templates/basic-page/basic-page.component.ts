@@ -1,7 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { PwService } from '../core/pw.service';
 import { Router } from '@angular/router';
-import { RouterLinkService } from '../core/router-link.service';
+import { PwService } from '../../core/pw.service';
+import { RouterLinkService } from '../../core/router-link.service';
 
 @Component({
   selector: 'app-page-content-default',

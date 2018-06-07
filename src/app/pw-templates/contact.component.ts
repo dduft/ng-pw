@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormComponent } from './form/form.component';
+import { BasicFormComponent } from './basic-form/basic-form.component';
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './form/form.component.html',
-  styleUrls: ['./form/form.component.scss']
+  templateUrl: './basic-form/basic-form.component.html',
+  styleUrls: ['./basic-form/basic-form.component.scss']
 })
-export class ContactComponent extends FormComponent implements OnInit {
+export class ContactComponent extends BasicFormComponent implements OnInit {
 
   ngOnInit() {
     super.ngOnInit();
